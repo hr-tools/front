@@ -26,6 +26,30 @@ export default function FAQ() {
           opened={loaderData.opened}
           entries={[
             {
+              id: 'layer-urls',
+              title: 'How do I get a foal\'s layer URLs?',
+              content: <div>
+                <p>
+                  Heads up! This version of Realvision is only for users that are
+                  able to use inspect element on Horse Reality pages.
+                  It is <em>not</em> supposed to be for mobile users.
+                  If you're on a desktop though, here's what you do:
+                </p>
+                <ol className='list-decimal ml-4'>
+                  <li>Go to any foal page (like <span className='font-bold'>https://www.horsereality.com/horses/1/</span>)</li>
+                  <li>Press F12 on your keyboard, or right click and select "Inspect"</li>
+                  <li>Find the <code>img</code> blocks that say <code>class="foal"</code> on them</li>
+                  <li>Copy each URL (the part after <code>src</code> and in quotes) into a box on Realvision</li>
+                  <li>Realvision will show the body part of each layer (like "Body" or "Body Whites") if you've copied it correctly</li>
+                </ol>
+                <img
+                  className='my-4 mx-auto rounded'
+                  src='/static/faq/realvision-layer-urls.png'
+                />
+                <p>You should also check out <TextLink to='/extension'>our browser extension</TextLink>, which does all this for you.</p>
+              </div>
+            },
+            {
               id: 'base-color-selections',
               title: 'What are the base color selection boxes for? Do I need to use them?',
               content: <p>
