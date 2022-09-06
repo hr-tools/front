@@ -1,0 +1,16 @@
+{
+    "index_description": "This is the hub page for Realtools - a collection of Horse Reality webtools. Click on a tool's name below to see it in action.",
+    "meta_description": "A collection of Horse Reality webtools",
+    "credits_title": "Credits",
+    "credits_deloryan": "All horse artwork",
+    "credits_realvision_data": "Realvision data by various contributors",
+    "credits_coolicons": "Icons by coolicons",
+    "settings_title": "Settings",
+    "settings_use_watermark": "Use watermark on merged images",
+    "settings_clear_genes": "Clear gene selections on successful foal prediction",
+    "settings_site_locale": "Site Locale (refresh to apply)",
+    "settings_site_theme": "Site Theme",
+    "settings_theme_system": "System",
+    "settings_theme_light": "Light",
+    "settings_theme_dark": "Dark"
+}
