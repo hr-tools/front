@@ -211,7 +211,12 @@ export default function Vision() {
                 }
               }}
             >
-              <TextInputLabel>{_('ui_layers')}</TextInputLabel>
+              <TextInputLabel>
+                {_('ui_layers')}{' '}
+                <TextLink to='/vision/faq?o=layer-urls#layer-urls'>
+                  <i className='ci-info_circle'/>
+                </TextLink>
+              </TextInputLabel>
               <div className='space-y-2'>
               {inputKeys.map((key, index) => {
                 return (
