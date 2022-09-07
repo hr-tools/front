@@ -1,4 +1,4 @@
-import { Form, useLoaderData } from '@remix-run/react'
+import { Form, Link, useLoaderData } from '@remix-run/react'
 import React, { useEffect, useState } from 'react'
 import ReactModal from 'react-modal'
 import type { LoaderFunction, MetaFunction } from '@remix-run/node'
@@ -6,9 +6,9 @@ import type { LoaderFunction, MetaFunction } from '@remix-run/node'
 // @ts-ignore
 import apiRequest from '~/common/api'
 // @ts-ignore
-import { Button, TextInput, TextInputLabel, toggleOptions } from '~/common/inputs'
+import { Button, TextInput, TextInputLabel } from '~/common/inputs'
 // @ts-ignore
-import { getString, possibleErrors } from '~/common/strings'
+// import _ from '~/common/strings'
 // @ts-ignore
 import TitleBar, { setting } from '~/common/title'
 // @ts-ignore
@@ -205,6 +205,7 @@ export default function Multi() {
             />
             <div className='space-x-2'>
               <Button type='submit'>Add Layer</Button>
+              <Link to='/merge/faq?o=multi-mode#multi-mode'><Button styletype='secondary'>FAQ</Button></Link>
             </div>
           </Form>
         </div>

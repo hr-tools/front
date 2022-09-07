@@ -8,7 +8,7 @@
     "settings_title": "Settings",
     "settings_use_watermark": "Use watermark on merged images",
     "settings_clear_genes": "Clear gene selections on successful foal prediction",
-    "settings_site_locale": "Site Locale (refresh to apply)",
+    "settings_site_locale": "Site Language (refresh to apply)",
     "settings_site_theme": "Site Theme",
     "settings_theme_system": "System",
     "settings_theme_light": "Light",

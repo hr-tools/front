@@ -11,9 +11,7 @@ import TitleBar from '~/common/title'
 
 export const loader: LoaderFunction = ({ request }) => {
   const url = new URL(request.url)
-  return {
-    opened: url.searchParams.get('o'),
-  }
+  return { opened: url.searchParams.get('o') }
 }
 
 export const meta: MetaFunction = () => {
@@ -52,21 +50,13 @@ export default function FAQ() {
               id: 'what-does-this-tool-do',
               title: 'What does this tool do?',
               content: <p>
-                Realmerge layers the images that make up your horse to avoid having to do this manually in an art program.
-                If you just want the image of a horse with no adjustments, Realmerge Multi is not necessary.
-                If you're merging a mare with a foal, it provides both images in tabs at the bottom.
-                It has two optional features:
-                <ol className='list-decimal ml-4'>
-                  <li>
-                    Remove any white layers from your horse when merging to help with creating art, color guides, etc.
-                  </li>
-                  <li>
-                    Display color info after merging.
-                    Please note that due to duplicates between base colors/genotypes
-                    or undiscovered layers, the phenotype and genotype may not be correct.
-                    Realmerge will tell you if duplicates or undiscovered layers are detected so you can make any necessary adjustments.
-                  </li>
-                </ol>
+                Realmerge layers the images that make up your horse to avoid
+                having to do this manually in an art program.
+                If you just want the image of a horse with no adjustments,
+                Realmerge Multi is not necessary.
+                Optionally, Realmerge can remove any white layers from your
+                horse when merging to help with creating art, color guides,
+                etc.
               </p>,
             },
             {
