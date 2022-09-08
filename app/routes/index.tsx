@@ -33,7 +33,7 @@ export default function Index() {
         {ToolBtn({ name: 'Realmerge Multi', link: '/merge/multi' })}
         {ToolBtn({ name: 'Realvision', link: '/vision' })}
         {ToolBtn({ name: 'Extension', link: '/extension' })}
-        {/*ToolBtn({ name: 'iOS Shortcut', link: '/shortcut' })*/}
+        {ToolBtn({ name: 'iOS Shortcut', link: '/shortcut' })}
       </div>
       <h1 className='text-4xl font-bold mt-8'>Contact us</h1>
       <p className='text-base'>

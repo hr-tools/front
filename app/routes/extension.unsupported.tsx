@@ -18,9 +18,9 @@ export default function Index() {
         </ul>
         <p className='mt-4'>
           Our extension does not support mobile devices or Safari.
-          {/*If you're on an iOS device, check out our {(
+          If you're on an iOS device, check out our {(
             <TextLink to='/shortcut'>shortcut</TextLink>
-          )} (<TextLink to='/shortcut/faq'>FAQ</TextLink>)!*/}
+          )} (<TextLink to='/shortcut/faq'>FAQ</TextLink>)!
         </p>
       </div>
     </div>
