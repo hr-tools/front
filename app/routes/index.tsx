@@ -37,7 +37,8 @@ export default function Index() {
       </div>
       <h1 className='text-4xl font-bold mt-8'>Contact us</h1>
       <p className='text-base'>
-        Feel free to <TextLink to='https://discord.com/invite/TFgqyWF9bn'>join our Discord server</TextLink> if you need to contact us.
+        Feel free to <TextLink to='https://www.horsereality.com/forum/topic_41112/'>use our forum thread</TextLink> or
+        {' '}<TextLink to='https://discord.com/invite/TFgqyWF9bn'>join our Discord server</TextLink> if you need to contact us.
         If you have an issue with predicting foals on Realvision, be sure to check out #unpredictables first.
       </p>
       <h1 className='text-4xl font-bold mt-8'>Donate</h1>
