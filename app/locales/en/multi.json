@@ -1,1 +1,6 @@
-{}
+{
+    "ui_layer_url": "Layer URL",
+    "ui_add_layer": "Add Layer",
+    "ui_group_name": "Group Name (optional)",
+    "ui_faq_realmerge": "Realmerge FAQ"
+}

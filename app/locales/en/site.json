@@ -12,5 +12,9 @@
     "settings_site_theme": "Site Theme",
     "settings_theme_system": "System",
     "settings_theme_light": "Light",
-    "settings_theme_dark": "Dark"
+    "settings_theme_dark": "Dark",
+    "ui_horse_url": "Horse URL",
+    "ui_options": "Options",
+    "ui_copy_share_url": "Copy Share URL",
+    "ui_copied": "Copied!"
 }

@@ -1,0 +1,20 @@
+{
+    "index_description": "Dies ist die Hub Seite für Realtools - eine Sammlung von Hilfsprogrammen für Horse Reality. Klicke auf den Namen eines Hilfsprogramms, um zu erfahren wie es arbeitet.",
+    "meta_description": "Eine Sammlung von Hilfsprogrammen für Horse Reality.",
+    "credits_title": "Verzeichnis von Herausgebenden und Mitwirkenden",
+    "credits_deloryan": "Jegliche Pferdeillustrationen",
+    "credits_realvision_data": "Daten für Realvision mit der Hilfe von mehreren Mitwirkenden",
+    "credits_coolicons": "Symbole von coolicons",
+    "settings_title": "Einstellungen",
+    "settings_use_watermark": "[Horse Reality] Wasserzeichen zu zusammengefügten Bildern hinzufügen",
+    "settings_clear_genes": "Ausgewählte Gene nach erfolgreicher Vorhersage des Fohlens löschen",
+    "settings_site_locale": "Sprache der Seite",
+    "settings_site_theme": "Thema der Seite",
+    "settings_theme_system": "System",
+    "settings_theme_light": "Tagmodus",
+    "settings_theme_dark": "Nachtmodus",
+    "ui_horse_url": "Webadresse des Pferdes",
+    "ui_options": "Auswahlmöglichkeiten",
+    "ui_copy_share_url": "Link zum Teilen kopieren",
+    "ui_copied": "Kopiert!"
+}
