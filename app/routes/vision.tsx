@@ -382,7 +382,7 @@ export default function Vision() {
               <div className='space-x-2'>
                 <Button type='submit'>{_('ui_predict')}</Button>
                 <Button styletype='secondary' onClick={toggleOptions}>{_('ui_options')} <i id='options-icon' className='ci-chevron_up'/></Button>
-                <Link to='/vision/faq'><Button styletype='secondary'>{_('ui_faq')}</Button></Link>
+                <Link to='/vision/faq'><Button styletype='secondary'>FAQ</Button></Link>
               </div>
               <div id='options-container' className='block'>
                 <div className='rounded bg-gray-300 dark:bg-slate-700 py-3 px-4 mt-3'>
