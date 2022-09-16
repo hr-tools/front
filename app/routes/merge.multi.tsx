@@ -8,7 +8,7 @@ import apiRequest from '~/common/api'
 // @ts-ignore
 import { Button, TextInput, TextInputLabel } from '~/common/inputs'
 // @ts-ignore
-// import _ from '~/common/strings'
+import _ from '~/common/strings'
 // @ts-ignore
 import TitleBar, { setting } from '~/common/title'
 // @ts-ignore
@@ -135,17 +135,17 @@ export default function Multi() {
               // @ts-ignore
               copyText(shareData.url)
               const t = event.currentTarget
-              t.innerText = 'Copied!'
+              t.innerText = _('ui_copied')
               t.classList.add('bg-green-600')
               t.classList.add('hover:bg-green-700')
               setTimeout(() => {
-                t.innerText = 'Copy Share URL'
+                t.innerText = _('ui_copy_share_url')
                 t.classList.remove('bg-green-600')
                 t.classList.remove('hover:bg-green-700')
               }, 3000)
             }}
             >
-            Copy Share URL
+            {_('ui_copy_share_url')}
           </Button>
         </div>
       </ReactModal>
@@ -190,21 +190,21 @@ export default function Multi() {
               setGrouped(copyObject(grouped))
             }}
           >
-            <TextInputLabel>Layer URL</TextInputLabel>
+            <TextInputLabel>{_('ui_layer_url')}</TextInputLabel>
             <TextInput
-              placeholder='https://horsereality.com/upload/...'
+              placeholder='https://www.horsereality.com/upload/...'
               pattern={layerUrlRegex.source}
               name='url'
               required
             />
             <div className='mt-2' />
-            <TextInputLabel>Group Name (optional)</TextInputLabel>
+            <TextInputLabel>{_('ui_group_name')}</TextInputLabel>
             <TextInput
               placeholder='Foal Doe 12345'
               name='group-name'
             />
             <div className='space-x-2'>
-              <Button type='submit'>Add Layer</Button>
+              <Button type='submit'>{_('ui_add_layer')}</Button>
               <Link to='/merge/faq?o=multi-mode#multi-mode'><Button styletype='secondary'>FAQ</Button></Link>
             </div>
           </Form>

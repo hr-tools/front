@@ -3,6 +3,8 @@ import { useLoaderData } from '@remix-run/react'
 import type { LoaderFunction, MetaFunction } from '@remix-run/node'
 
 // @ts-ignore
+import _ from '~/common/strings'
+// @ts-ignore
 import { Entries } from '~/common/entries'
 // @ts-ignore
 import { TextLink } from '~/common/links'
@@ -25,7 +27,7 @@ export default function FAQ() {
     <div>
       <div className='w-full'>
         <TitleBar backTo='/merge/multi' backText='Back to Multi' />
-        <h1 className='text-5xl font-extrabold'>Realmerge FAQ</h1>
+        <h1 className='text-5xl font-extrabold'>{_('ui_faq_realmerge')}</h1>
         <Entries
           opened={loaderData.opened}
           entries={[
