@@ -21,6 +21,20 @@ function updateHtmlTheme() {
   }
 }
 
+const hrUserLink = (id: number, name: string) => {return <TextLink to={`https://v2.horsereality.com/user/${id}`}>{name}</TextLink>}
+
+export function CreditsItems() {
+  return (
+    <>
+    <li>{_('credits_deloryan')} &copy; <TextLink to='https://www.deloryan.com'>Deloryan B.V.</TextLink></li>
+    <li>Realtools &copy; <TextLink to='https://shay.cat'>shay</TextLink></li>
+    <li>Translations by: {hrUserLink(136244, 'Linn (German)')}</li>
+    <li>Realvision data by <TextLink to='/vision/credits'>various contributors</TextLink></li>
+    <li>{_('credits_coolicons')} <TextLink to='https://coolicons.cool'>coolicons</TextLink></li>
+    </>
+  )
+}
+
 export default function TitleBar(props) {
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -72,7 +86,6 @@ export default function TitleBar(props) {
               {' '}{_('settings_clear_genes')}
             </label>
           </li>
-          {/*
           <li>
             <TextInputLabel>{_('settings_site_locale')}</TextInputLabel>
             <select
@@ -84,11 +97,10 @@ export default function TitleBar(props) {
               }}
             >
               <option value='en'>English</option>
-              <option value='nl'>Dutch (incomplete)</option>
-              <option value='de'>German (incomplete)</option>
+              {/*<option value='nl'>Dutch (incomplete)</option>*/}
+              <option value='de'>German</option>
             </select>
           </li>
-          */}
           <li>
             <TextInputLabel>{_('settings_site_theme')}</TextInputLabel>
             <select
@@ -111,12 +123,7 @@ export default function TitleBar(props) {
           </li>
         </ul>
         <h1 className='text-xl font-extrabold mt-4'>{_('credits_title')}</h1>
-        <ul className='text-sm'>
-          <li>{_('credits_deloryan')} &copy; <TextLink to='https://www.deloryan.com'>Deloryan B.V.</TextLink></li>
-          <li>Realtools &copy; <TextLink to='https://shay.cat'>shay</TextLink> (<TextLink to='https://ko-fi.com/shayypy'>donate</TextLink>)</li>
-          <li>Realvision data by <TextLink to='/vision/credits'>various contributors</TextLink></li>
-          <li>{_('credits_coolicons')} <TextLink to='https://coolicons.cool'>coolicons</TextLink></li>
-        </ul>
+        <ul className='text-sm'><CreditsItems /></ul>
       </div>
     </ReactModal>
     <div className='text-lg flex -mb-5'>

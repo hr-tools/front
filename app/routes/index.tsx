@@ -5,6 +5,8 @@ import { Link } from '@remix-run/react'
 import { TextLink } from '~/common/links'
 // @ts-ignore
 import _ from '~/common/strings'
+// @ts-ignore
+import { CreditsItems } from '~/common/title'
 
 function ToolBtn(props: { link: string, name: string }) {
   return (
@@ -41,20 +43,8 @@ export default function Index() {
         {' '}<TextLink to='https://discord.com/invite/TFgqyWF9bn'>join our Discord server</TextLink> if you need to contact us.
         If you have an issue with predicting foals on Realvision, be sure to check out #unpredictables first.
       </p>
-      <h1 className='text-4xl font-bold mt-8'>Donate</h1>
-      <p className='text-base'>
-        We host a <TextLink to='https://ko-fi.com/shayypy'>Ko-fi page</TextLink> and a{' '}
-        <TextLink to='https://paypal.me/shaywantsmoney'>direct PayPal link</TextLink>{' '}
-        for donations to help with server &amp; domain costs.
-        Donating is optional and won't grant you any special perks.
-      </p>
       <h1 className='text-4xl font-bold mt-8'>{_('credits_title')}</h1>
-        <ul className='text-base'>
-          <li>{_('credits_deloryan')} &copy; <TextLink to='https://www.deloryan.com'>Deloryan B.V.</TextLink></li>
-          <li>Realtools &copy; <TextLink to='https://shay.cat'>shay</TextLink></li>
-          <li>Realvision data by <TextLink to='/vision/credits'>various contributors</TextLink></li>
-          <li>{_('credits_coolicons')} <TextLink to='https://coolicons.cool'>coolicons</TextLink></li>
-        </ul>
+      <ul className='text-base'><CreditsItems /></ul>
     </div>
   )
 }
