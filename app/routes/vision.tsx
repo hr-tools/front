@@ -242,7 +242,7 @@ export default function Vision() {
                     onClick={() => {setUseLayersMode(true); clearMostState()}}
                     type='button'
                   >
-                    Switch to advanced mode
+                    {_('ui_advanced_mode')}
                   </button>
                 </div>
                 <TextInput
@@ -266,7 +266,7 @@ export default function Vision() {
                     onClick={() => {setUseLayersMode(false); clearMostState()}}
                     type='button'
                   >
-                    Back to standard mode
+                    {_('ui_standard_mode')}
                   </button>
                 </div>
                 <div className='space-y-2'>

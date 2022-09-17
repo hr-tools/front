@@ -39,6 +39,8 @@
     "ui_share_vision": "Share Prediction",
     "ui_predict": "Predict",
     "ui_faq_realvision": "Realvision FAQ",
+    "ui_advanced_mode": "Switch to advanced mode",
+    "ui_standard_mode": "Back to standard mode",
     "note_duplicate_color_found": "This color shares images with other base colors. Test your horse to see if it is black (E_ aa), bay (E_ A_), or red-based (ee __).",
     "note_white_layer_unmatched": "This horse has white layers, but we do not recognize them. Check to see if this color info is correct.",
     "note_shared_genotype": "This color shares images with another genotype. If this is your horse, test it to see which genes it does or does not carry.",
