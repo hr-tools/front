@@ -11,10 +11,15 @@ process.env.LANGS = JSON.stringify({
     ...readAsJson('app/locales/en/realvision.json'),
     ...readAsJson('app/locales/en/multi.json'),
   },
-  nl: {
-    ...readAsJson('app/locales/nl/site.json'),
-    ...readAsJson('app/locales/nl/realvision.json'),
-  }
+  //nl: {
+  //  ...readAsJson('app/locales/nl/site.json'),
+  //  ...readAsJson('app/locales/nl/realvision.json'),
+  //},
+  de: {
+    ...readAsJson('app/locales/de/site.json'),
+    ...readAsJson('app/locales/de/realvision.json'),
+    ...readAsJson('app/locales/de/multi.json'),
+  },
 })
 
 export default function handleRequest(
