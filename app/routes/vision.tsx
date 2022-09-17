@@ -578,8 +578,8 @@ function Results(data: any) {
             })
             setShownShareUrl(url.toString())
           } else {
-            const url = new URL(generateSimpleUrl({ extra: { share: data.horse.lifenumber } }))
-            setShownShareUrl(url.toString())
+            const url = generateSimpleUrl({ extra: { share: data.horse.lifenumber } })
+            setShownShareUrl(url)
           }
         }}>
           Share
