@@ -189,6 +189,7 @@ function Results(data: any) {
   const setShowShareModal = data.setShowShareModal
 
   const url = `https://www.horsereality.com/horses/${data.horse.lifenumber}/`
+  const foalUrl = data.horse.foal_lifenumber ? `https://www.horsereality.com/horses/${data.horse.foal_lifenumber}/` : null
   const hasAdult = !!data.merged.adult
   const hasFoal = !!data.merged.foal
   const hasColorInfo = !!data.color_info
@@ -221,7 +222,7 @@ function Results(data: any) {
         </div>
       ) : currentTab === 'foal' ? (
         <div>
-          <a className='hover:underline underline-offset-2 decoration-slate-700 dark:decoration-slate-50' href={url} target='_blank'>
+          <a className='hover:underline underline-offset-2 decoration-slate-700 dark:decoration-slate-50' href={foalUrl ?? url} target='_blank'>
             <h2 className='text-2xl mb-3 font-bold'>{data.horse.name}</h2>
           </a>
           <img className='rounded bg-slate-400 mx-auto dark:bg-slate-700 p-3' src={data.merged.foal}/>
