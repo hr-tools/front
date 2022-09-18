@@ -28,7 +28,7 @@ export function CreditsItems() {
     <>
     <li>{_('credits_deloryan')} &copy; <TextLink to='https://www.deloryan.com'>Deloryan B.V.</TextLink></li>
     <li>Realtools &copy; <TextLink to='https://shay.cat'>shay</TextLink></li>
-    <li>Translations by: {hrUserLink(136244, 'Linn (German)')}</li>
+    {/*<li>Translations by: {hrUserLink(136244, 'Linn (German)')}</li>*/}
     <li>Realvision data by <TextLink to='/vision/credits'>various contributors</TextLink></li>
     <li>{_('credits_coolicons')} <TextLink to='https://coolicons.cool'>coolicons</TextLink></li>
     </>
@@ -86,7 +86,7 @@ export default function TitleBar(props) {
               {' '}{_('settings_clear_genes')}
             </label>
           </li>
-          <li>
+          {/*<li>
             <TextInputLabel>{_('settings_site_locale')}</TextInputLabel>
             <select
               className='text-slate-500 dark:text-slate-50 bg-gray-300 dark:bg-slate-700 rounded py-1.5 px-2 w-full cursor-pointer'
@@ -97,10 +97,10 @@ export default function TitleBar(props) {
               }}
             >
               <option value='en'>English</option>
-              {/*<option value='nl'>Dutch (incomplete)</option>*/}
+              <option value='nl'>Dutch (incomplete)</option>
               <option value='de'>German</option>
             </select>
-          </li>
+          </li>*/}
           <li>
             <TextInputLabel>{_('settings_site_theme')}</TextInputLabel>
             <select
