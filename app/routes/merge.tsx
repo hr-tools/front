@@ -236,23 +236,23 @@ function Results(data: any) {
           </p>
           {color_info.color && (
             <div>
-              <h2 className='text-2xl font-bold'>Phenotype</h2>
+              <h2 className='text-2xl font-bold'>{_('ui_phenotype')}</h2>
               <p className='text-slate-800 dark:text-slate-200 text-lg'>{color_info.color}</p>
             </div>
           )}
           {color_info.dilution && (
             <div>
-              <h2 className='text-2xl font-bold'>Genotype</h2>
+              <h2 className='text-2xl font-bold'>{_('ui_genotype')}</h2>
               <p className='text-slate-800 dark:text-slate-200 text-lg'>{color_info.dilution}</p>
             </div>
           )}
-          {errors.length && (
+          {!!errors.length && (
             <div>
               <h2 className='text-rose-50 text-2xl font-bold'>Errors</h2>
               <ul className='text-slate-800 dark:text-slate-200 text-lg list-disc ml-4'>{errors}</ul>
             </div>
           )}
-          {colorNotes.length && (
+          {!!colorNotes.length && (
             <div>
               <h2 className='text-2xl font-bold'>Notes</h2>
               <ul className='text-slate-800 dark:text-slate-200 text-lg list-disc ml-4'>{colorNotes}</ul>
