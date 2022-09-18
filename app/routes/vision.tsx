@@ -532,7 +532,7 @@ function Results(data: any) {
           {
             color_info.color ? (
               <div>
-                <h2 className='text-2xl font-bold'>Phenotype</h2>
+                <h2 className='text-2xl font-bold'>{_('ui_phenotype')}</h2>
                 <p className='text-slate-800 dark:text-slate-200 text-lg'>{color_info.color}</p>
               </div>
             ) : null
@@ -540,7 +540,7 @@ function Results(data: any) {
           {
             color_info.dilution ? (
               <div>
-                <h2 className='text-2xl font-bold'>Genotype</h2>
+                <h2 className='text-2xl font-bold'>{_('ui_genotype')}</h2>
                 <p className='text-slate-800 dark:text-slate-200 text-lg'>{color_info.dilution}</p>
               </div>
             ) : null
