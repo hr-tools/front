@@ -33,7 +33,7 @@ export const loader: LoaderFunction = async ({ request }) => {
   }
 
   const data = await apiRequest('POST', '/merge', { json: payload })
-  return { ...data, fromMerge }
+  return { ...data, fromMerge, root: url.origin }
 }
 
 export default function Merge() {
@@ -50,7 +50,7 @@ export default function Merge() {
     `.trim()
   }
   const [banner, setBanner] = useState(loaderData?.error ? loaderData : loaderData?.fromMerge ? mergeMessage : null)
-  const [results, setResults] = useState(loaderData?.lifenumber ? loaderData : null)
+  const [results, setResults] = useState(loaderData?.horse?.lifenumber ? loaderData : null)
   const [showShareModal, setShowShareModal] = useState(false)
 
   return (
@@ -75,7 +75,7 @@ export default function Merge() {
           </div>
           <TextInput
             value={results
-              ? generateSimpleUrl({ extra: { share: results.horse.lifenumber }})
+              ? generateSimpleUrl({ extra: { share: results.horse.lifenumber }, root: results.root })
               : ''
             }
             readOnly

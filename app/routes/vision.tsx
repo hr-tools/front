@@ -34,19 +34,7 @@ export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url)
   const params = url.searchParams
 
-  const breed = params.get('b')
-  const sex = params.get('s')
-  const layerUrls = params.getAll('layer')
-  if (!(breed && sex && layerUrls.length >= 3)) return null
-
-  const payload = {
-    layer_urls: layerUrls,
-    horse_info: {
-      lifenumber: 0,
-      name: params.get('n') ?? 'Foal Doe',
-      breed,
-      sex,
-    },
+  const payload: any = {
     genes: {},
   }
 
@@ -55,11 +43,38 @@ export const loader: LoaderFunction = async ({ request }) => {
     if (value) payload.genes[gene] = value
   }
 
-  const data = await apiRequest('POST', '/predict', { json: payload })
-  data.horse.raw_breed = breed
-  data.horse.raw_layer_urls = layerUrls
-  data.root = url.origin
-  return data
+  const lifenumber = params.get('share')
+  if (lifenumber) {
+    payload.lifenumber = Number(lifenumber)
+    const data = await apiRequest('POST', '/predict-lifenumber', { json: payload })
+    return {
+      ...data,
+      root: url.origin
+    }
+  }
+
+  const breed = params.get('b')
+  const sex = params.get('s')
+  const layerUrls = params.getAll('layer')
+  if (breed && sex && layerUrls.length >= 3) {
+    payload.layer_urls = layerUrls
+    payload.horse_info = {
+      lifenumber: 0,
+      name: params.get('n') ?? 'Foal Doe',
+      breed,
+      sex,
+    }
+
+    const data = await apiRequest('POST', '/predict', { json: payload })
+    return {
+      ...data,
+      raw_breed: breed,
+      raw_layer_urls: layerUrls,
+      root: url.origin
+    }
+  }
+
+  return null
 }
 
 export const meta: MetaFunction = () => {
