@@ -26,7 +26,7 @@ export default function FAQ() {
   return (
     <div>
       <div className='w-full'>
-        <TitleBar backTo='/merge/multi' backText='Back to Multi' />
+        <TitleBar backTo='/merge' backText='Back to Merge' />
         <h1 className='text-5xl font-extrabold'>{_('ui_faq_realmerge')}</h1>
         <Entries
           opened={loaderData.opened}
@@ -36,11 +36,19 @@ export default function FAQ() {
               title: 'How do I use Realmerge?',
               content: <div>
                 <p>
-                  Currently, Realmerge is only available in our {(
-                    <TextLink to='/extension'>browser extension for desktop computers</TextLink>
-                  )}.
-                  After you have installed the extension, navigate to any horse
-                  page and click "Merge" at the bottom of the white info box.
+                  First and foremost, Realmerge is available <TextLink to='/merge'>on this website</TextLink>,
+                  in our <TextLink to='/extension'>desktop/Android browser extension</TextLink>,
+                  and in our <TextLink to='/shortcut/faq'>iOS shortcut</TextLink>.
+                </p>
+                <p className='font-bold mt-2'>This site</p>
+                <p>
+                  To use the website version of Realmerge, simply put any horse page URL (like <span className='font-bold'>https://www.horsereality.com/horses/1/</span>)
+                  in the box that says "{_('ui_horse_url')}" and click the "Merge" button.
+                </p>
+                <p className='font-bold mt-2'>Browser extension</p>
+                <p>
+                  After you have installed the extension, navigate to any <TextLink to='https://www.horsereality.com/horses/1/' newtab='true'>horse
+                  page</TextLink> and click "Merge" at the bottom of the white info box.
                 </p>
                 <img
                   className='mt-4 mx-auto rounded'

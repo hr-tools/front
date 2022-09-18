@@ -32,6 +32,7 @@ export default function Index() {
         </div>
       </div>
       <div className='flex flex-wrap mt-6'>
+        {ToolBtn({ name: 'Realmerge', link: '/merge' })}
         {ToolBtn({ name: 'Realmerge Multi', link: '/merge/multi' })}
         {ToolBtn({ name: 'Realvision', link: '/vision' })}
         {ToolBtn({ name: 'Extension', link: '/extension' })}
