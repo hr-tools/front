@@ -4,8 +4,6 @@ import { Link } from '@remix-run/react'
 // @ts-ignore
 import { TextLink } from '~/common/links'
 // @ts-ignore
-import { Banner } from '~/common/notifications'
-// @ts-ignore
 import _ from '~/common/strings'
 // @ts-ignore
 import { CreditsItems } from '~/common/title'
