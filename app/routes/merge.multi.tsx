@@ -16,7 +16,7 @@ import { layerUrlRegex } from '~/common/regexes'
 // @ts-ignore
 import { dissectLayerUrl, constructLayerUrl } from '~/common/layers'
 // @ts-ignore
-import { modalStyle, innerModalClassName, Banner } from '~/common/notifications'
+import { modalStyle, innerModalClassName, Banner, DeprecationBanner } from '~/common/notifications'
 // @ts-ignore
 import { copyText } from '~/common/share'
 
@@ -149,6 +149,7 @@ export default function Multi() {
           </Button>
         </div>
       </ReactModal>
+      <DeprecationBanner />
       {banner && (
         <Banner
           error={banner.error}

@@ -9,6 +9,8 @@ import TitleBar from '~/common/title'
 // @ts-ignore
 import { TextLink } from '~/common/links'
 // @ts-ignore
+import { DeprecationBanner } from '~/common/notifications'
+// @ts-ignore
 import { Entries } from '~/common/entries'
 
 export const loader: LoaderFunction = ({ request }) => {
@@ -21,6 +23,7 @@ export default function FAQ() {
 
   return (
     <div>
+      <DeprecationBanner />
       <div className='w-full'>
         <TitleBar backTo='/vision' backText='Back to Realvision' />
         <h1 className='text-5xl font-extrabold'>{_('ui_faq_realvision')}</h1>

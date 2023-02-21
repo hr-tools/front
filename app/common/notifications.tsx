@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '@remix-run/react'
 
 export function ModalContainer(props) {
   return (
@@ -77,3 +78,14 @@ export function Banner(props) {
     </div>
   )
 }
+
+export const DeprecationBanner = () => (
+  <Banner
+    onClose={() => {}}
+  >
+    <Link to='/'>
+      <span className='font-bold'>Deprecation notice</span> - We have made the decision to stop working
+      on Realtools insofar as new features and most bug fixes. Click for more info.
+    </Link>
+  </Banner>
+)

@@ -7,6 +7,8 @@ import TitleBar from '~/common/title'
 // @ts-ignore
 import { Entries } from '~/common/entries'
 // @ts-ignore
+import { DeprecationBanner } from '~/common/notifications'
+// @ts-ignore
 import { TextLink } from '~/common/links'
 
 export const loader: LoaderFunction = ({ request }) => {
@@ -23,6 +25,7 @@ export default function FAQ() {
 
   return (
     <div>
+      <DeprecationBanner />
       <div className='w-full'>
         <TitleBar />
         <h1 className='text-5xl font-extrabold'>Shortcut FAQ</h1>

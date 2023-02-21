@@ -4,6 +4,8 @@ import { Link } from '@remix-run/react'
 // @ts-ignore
 import { TextLink } from '~/common/links'
 // @ts-ignore
+import { Banner } from '~/common/notifications'
+// @ts-ignore
 import _ from '~/common/strings'
 // @ts-ignore
 import { CreditsItems } from '~/common/title'
@@ -19,6 +21,22 @@ function ToolBtn(props: { link: string, name: string }) {
 export default function Index() {
   return (
     <div>
+      <div className='my-2 bg-gray-200 dark:bg-slate-700 rounded py-3 px-4 mb-3 text-sm'>
+        <p className='font-bold'>Deprecation notice - Realtools has reached end-of-life</p>
+        <p>
+          We have made the decision to stop working on Realtools insofar as new features and
+          most bug fixes. RT will stay up in its current state until Horse Reality pushes
+          the new horse page and inevitably breaks the core functions of RT (probably
+          months from now).
+          <br /><br />
+          This was a long time coming and we haven't enjoyed working on this project for
+          several months. The new quarter horse layers will never be predictable nor will
+          any other new colors implemented in the future. #unpredictables (in Discord) is
+          locked and won't be addressed anymore.
+          <br /><br />
+          We're glad you enjoyed using Realtools for the roughly 2 years it's been up.
+        </p>
+      </div>
       <div className='flex'>
         <div className='w-full'>
           <h1 className='text-5xl font-black'>Realtools</h1>

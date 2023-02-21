@@ -7,6 +7,8 @@ import New from '~/common/new'
 import TitleBar from '~/common/title'
 // @ts-ignore
 import { TextLink } from '~/common/links'
+// @ts-ignore
+import { DeprecationBanner } from '~/common/notifications'
 
 const users = {
   86694: { name: 'aBREEviate' },
@@ -78,6 +80,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
+      <DeprecationBanner />
       <div className='w-full'>
         <TitleBar backTo='/vision' backText='Back to Realvision' />
         <h1 className='text-4xl font-bold'>Realvision Contributors</h1>

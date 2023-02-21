@@ -9,6 +9,8 @@ import { Entries } from '~/common/entries'
 // @ts-ignore
 import { TextLink } from '~/common/links'
 // @ts-ignore
+import { DeprecationBanner } from '~/common/notifications'
+// @ts-ignore
 import TitleBar from '~/common/title'
 
 export const loader: LoaderFunction = ({ request }) => {
@@ -25,6 +27,7 @@ export default function FAQ() {
 
   return (
     <div>
+      <DeprecationBanner />
       <div className='w-full'>
         <TitleBar backTo='/merge' backText='Back to Merge' />
         <h1 className='text-5xl font-extrabold'>{_('ui_faq_realmerge')}</h1>

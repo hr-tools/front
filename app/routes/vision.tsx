@@ -16,7 +16,7 @@ import _ from '~/common/strings'
 // @ts-ignore
 import { generateSimpleUrl, copyText } from '~/common/share'
 // @ts-ignore
-import { modalStyle, innerModalClassName, Banner } from '~/common/notifications'
+import { modalStyle, innerModalClassName, Banner, DeprecationBanner } from '~/common/notifications'
 // @ts-ignore
 import { foalLayerUrlRegex, horseUrlRegex } from '~/common/regexes'
 // @ts-ignore
@@ -170,6 +170,7 @@ export default function Vision() {
           </Button>
         </div>
       </ReactModal>
+      <DeprecationBanner/>
       {banner && (
         <Banner
           error={banner.error}
@@ -178,6 +179,7 @@ export default function Vision() {
           {banner.message}
         </Banner>
       )}
+
       <div className='w-full'>
         <TitleBar />
         <h1 className='text-5xl font-extrabold'>Realvision</h1>

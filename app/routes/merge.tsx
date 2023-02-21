@@ -14,7 +14,7 @@ import { horseUrlRegex } from '~/common/regexes'
 // @ts-ignore
 import apiRequest from '~/common/api'
 // @ts-ignore
-import { modalStyle, innerModalClassName, Banner } from '~/common/notifications'
+import { modalStyle, innerModalClassName, Banner, DeprecationBanner } from '~/common/notifications'
 // @ts-ignore
 import { generateSimpleUrl, copyText } from '~/common/share'
 
@@ -99,6 +99,7 @@ export default function Merge() {
           </Button>
         </div>
       </ReactModal>
+      <DeprecationBanner />
       {banner && (
         <Banner
           error={banner.error}
